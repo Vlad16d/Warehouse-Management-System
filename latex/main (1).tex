@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+
+% Ustawienia strony i polskie znaki
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\linewidth]{logoWSIiZ.PNG}
+\end{figure}
+
+% Dane autora i dokumentu
+\title{Dokumentacja Projektu: System Zarządzania Magazynem}
+\author{Uladzislau Bainiarovich \\ Numer albumu: w68339}
+\date{2025}
+
+\begin{document}
+
+% Strona tytułowa
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% Spis treści
+\tableofcontents
+\newpage
+
+% Rozdział 1: Wstęp
+\section{Wstęp}
+System Zarządzania Magazynem to aplikacja, która umożliwia użytkownikom zarządzanie produktami i użytkownikami w bazie danych. Projekt został zrealizowany w języku C\# z wykorzystaniem bazy danych Microsoft SQL Server.
+
+% Rozdział 2: Cel projektu
+\section{Cel projektu}
+Celem projektu było stworzenie funkcjonalnego systemu, który umożliwia:
+\begin{itemize}
+    \item Dodawanie, usuwanie i edytowanie użytkowników oraz produktów.
+    \item Wyświetlanie listy użytkowników i produktów.
+    \item Zarządzanie bazą danych w sposób efektywny i bezpieczny.
+\end{itemize}
+
+% Rozdział 3: Opis funkcjonalności
+\section{Opis funkcjonalności}
+System oferuje następujące funkcjonalności:
+\begin{itemize}
+    \item Operacje CRUD (Create, Read, Update, Delete) dla użytkowników i produktów.
+    \item Walidację danych wprowadzanych przez użytkownika.
+    \item Obsługę wyjątków i błędów.
+    \item Integrację z bazą danych Microsoft SQL Server.
+\end{itemize}
+
+% Rozdział 4: Architektura projektu
+\section{Architektura projektu}
+Projekt wykorzystuje wzorzec warstwowy, który składa się z następujących komponentów:
+\begin{itemize}
+    \item \textbf{DatabaseManager}: Klasa odpowiedzialna za komunikację z bazą danych.
+    \item \textbf{PenaltyCalculator}: Klasa odpowiedzialna za obliczanie kar
+    \item \textbf{FileManager}: Klasa umożliwiająca zarządzanie danymi w systemie plików
+    \item \textbf{Program}: Główna klasa programu odpowiedzialna za interfejs użytkownika
+    \item \textbf{StatisticsManager}: Klasa zarządzająca generowaniem statystyk w systemie. 
+    \item \textbf{Validator}: Klasa odpowiedzialna za walidację danych wprowadzanych przez użytkownika. 
+    \item \textbf{Warehouse}: Klasa zarządzająca użytkownikami i produktami.
+    \item \textbf{User}: Reprezentacja użytkownika w systemie.
+    \item \textbf{Product}: Reprezentacja produktu w systemie.
+\end{itemize}
+
+Struktura bazy danych składa się z dwóch głównych tabel:
+\begin{itemize}
+    \item \textbf{Users}: Przechowuje dane użytkowników (Id, Name).
+    \item \textbf{Products}: Przechowuje dane produktów (Id, Name, Quantity, ExpiryDate, UserId).
+\end{itemize}
+
+% Rozdział 5: Instrukcja użytkownika
+\section{Instrukcja użytkownika}
+Aby uruchomić system zarządzania magazynem, wykonaj następujące kroki:
+\begin{enumerate}
+    \item Skonfiguruj bazę danych Microsoft SQL Server i zainicjalizuj ją przy użyciu dostarczonego skryptu SQL.
+    \item Uruchom aplikację z poziomu Visual Studio.
+    \item Korzystaj z menu aplikacji, aby dodawać użytkowników i produkty, a także przeglądać dane.
+\end{enumerate}
+
+% Rozdział 6: Podsumowanie
+\section{Podsumowanie}
+Projekt "System Zarządzania Magazynem" jest przykładem aplikacji opartej na języku C\#, która demonstruje podstawowe operacje na bazach danych oraz obsługę błędów i walidację danych. System został zaprojektowany w sposób modularny, co ułatwia jego rozbudowę w przyszłości.
+
+\end{document}
